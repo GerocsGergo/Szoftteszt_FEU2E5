@@ -43,6 +43,14 @@
 	
   }
   
+  function Convert(n){
+	var a = "";
+	if (n % 1000 == 0){
+	 a += 'M';
+	}
+	
+	return a;
+  }
   
    QUnit.module('romai teszt', function() {
     QUnit.test('1', function(assert) {
@@ -74,6 +82,10 @@
     });
 	QUnit.test('1000', function(assert) {
       assert.equal(LatinToRomai(1000),'M');
+    });
+	
+	QUnit.test('1000', function(assert) {
+      assert.equal(Convert(1000),'M');
     });
 	
   });
