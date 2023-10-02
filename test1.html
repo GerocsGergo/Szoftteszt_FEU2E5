@@ -8,11 +8,18 @@
   <script src="https://code.jquery.com/qunit/qunit-2.20.0.js"></script>
   <script>
   
+  function RomaiToLatin(n){
+	if(n == 'I'){
+	return '1';
+	}
+  }
+  
+  
    QUnit.module('romai teszt', function() {
     QUnit.test('', function(assert) {
-      assert.equal();
+      assert.equal(RomaiToLatin('I'),'1');
     });
-  
+  });
   
 </script>
 </body>
