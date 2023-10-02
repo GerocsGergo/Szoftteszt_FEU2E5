@@ -8,48 +8,49 @@
   <script src="https://code.jquery.com/qunit/qunit-2.20.0.js"></script>
   <script>
   
-  function RomaiToLatin(n){
-	if(n == 'I'){
-	return '1';
+  function LatinToRomai(n){
+	if(n == 1){
+	return 'I';
 	}
-	else if (n == 'II'){
-	return '2';
+	else if (n == 2){
+	return 'II';
 	}
-	else if (n == 'III'){
-	return '3';
+	else if (n == 3){
+	return 'III';
 	}
-	else if (n == 'IV'){
-	return '4';
+	else if (n == 4){
+	return 'IV';
 	}
-	else if (n == 'V'){
-	return '5';
+	else if (n == 5){
+	return 'V';
 	}
-	else if (n == 'VI'){
-	return '6';
+	else if (n == 10){
+	return 'X';
 	}
 	
   }
   
   
    QUnit.module('romai teszt', function() {
-    QUnit.test('I', function(assert) {
-      assert.equal(RomaiToLatin('I'),'1');
+    QUnit.test('1', function(assert) {
+      assert.equal(LatinToRomai(1),'I');
     });
-	QUnit.test('II', function(assert) {
-      assert.equal(RomaiToLatin('II'),'2');
+	QUnit.test('2', function(assert) {
+      assert.equal(LatinToRomai(2),'II');
     });
-	QUnit.test('III', function(assert) {
-      assert.equal(RomaiToLatin('III'),'3');
+	QUnit.test('3', function(assert) {
+      assert.equal(LatinToRomai(3),'III');
     });
-	QUnit.test('IV', function(assert) {
-      assert.equal(RomaiToLatin('IV'),'4');
+	QUnit.test('4', function(assert) {
+      assert.equal(LatinToRomai(4),'IV');
     });
-	QUnit.test('V', function(assert) {
-      assert.equal(RomaiToLatin('V'),'5');
+	QUnit.test('5', function(assert) {
+      assert.equal(LatinToRomai(5),'V');
     });
-	QUnit.test('VI', function(assert) {
-      assert.equal(RomaiToLatin('VI'),'6');
+	QUnit.test('10', function(assert) {
+      assert.equal(LatinToRomai(10),'X');
     });
+	
 	
 	
   });
