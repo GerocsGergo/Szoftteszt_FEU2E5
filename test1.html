@@ -12,12 +12,20 @@
 	if(n == 'I'){
 	return '1';
 	}
+	else if (n == 'II'){
+	return '2';
+	}
+	
+	
   }
   
   
    QUnit.module('romai teszt', function() {
-    QUnit.test('', function(assert) {
+    QUnit.test('I', function(assert) {
       assert.equal(RomaiToLatin('I'),'1');
+    });
+	QUnit.test('II', function(assert) {
+      assert.equal(RomaiToLatin('II'),'2');
     });
   });
   
