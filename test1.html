@@ -37,7 +37,7 @@
 	else if (n % 2 == 0){
 	return 'II';
 	}
-	else if(n % 1 == 0){
+	else if (n % 1 == 0){
 	return 'I';
 	}
 	
@@ -45,10 +45,15 @@
   
   function Convert(n){
 	var a = "";
-	if (n % 1000 == 0){
-	 a += 'M';
-	}
+	var hossz = n.toString().length;
 	
+	if (n>1000){
+		b = n/1000;
+		n = n - 1000;
+		for	(let i = 1; i <= b; i++){
+		 a += 'M';
+		}
+	}
 	return a;
   }
   
@@ -84,9 +89,11 @@
       assert.equal(LatinToRomai(1000),'M');
     });
 	
-	QUnit.test('1000', function(assert) {
-      assert.equal(Convert(1000),'M');
+	QUnit.test('Convert1000', function(assert) {
+      assert.equal(Convert(1500),'M');
     });
+
+
 	
   });
   
