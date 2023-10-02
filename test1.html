@@ -27,6 +27,10 @@
 	else if (n == 10){
 	return 'X';
 	}
+	else if (n == 50){
+	return 'L';
+	}
+	
 	
   }
   
@@ -50,7 +54,9 @@
 	QUnit.test('10', function(assert) {
       assert.equal(LatinToRomai(10),'X');
     });
-	
+	QUnit.test('50', function(assert) {
+      assert.equal(LatinToRomai(50),'L');
+    });
 	
 	
   });
