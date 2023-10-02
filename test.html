@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.20.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.20.0.js"></script>
+  <script>
+  function fizzbuzz(n) {
+	if(n%3==0 && n%5==0){
+	return "fizzbuzz";
+	}
+	
+	else if(n % 5 == 0){
+    return "buzz";
+	}
+	
+	else if(n%3==0){
+    return "fizz";
+	}
+	
+	else{
+    return n;
+	}
+  }
+  
+  function IntIncludes(n){
+  return n.toString.includes(str);
+  }
+
+  QUnit.module('fizzbuzz teszt', function() {
+    QUnit.test('egy', function(assert) {
+      assert.equal(fizzbuzz(1), '1');
+    });
+	
+	QUnit.test('ketto', function(assert) {
+      assert.equal(fizzbuzz(2), '2');
+    });
+	
+	QUnit.test('harom', function(assert) {
+      assert.equal(fizzbuzz(3), 'fizz');
+    });
+	
+	QUnit.test('negy', function(assert) {
+      assert.equal(fizzbuzz(4), '4');
+    });
+	
+	QUnit.test('ot', function(assert) {
+      assert.equal(fizzbuzz(5), 'buzz');
+    });
+	
+	QUnit.test('15', function(assert) {
+      assert.equal(fizzbuzz(15), 'fizzbuzz');
+    });
+	
+  });
+  
+ 
+
+
+  
+</script>
+</body>
+
