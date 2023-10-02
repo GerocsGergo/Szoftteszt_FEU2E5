@@ -15,7 +15,9 @@
 	else if (n == 'II'){
 	return '2';
 	}
-	
+	else if (n == 'III'){
+	return '3';
+	}
 	
   }
   
@@ -26,6 +28,9 @@
     });
 	QUnit.test('II', function(assert) {
       assert.equal(RomaiToLatin('II'),'2');
+    });
+	QUnit.test('II', function(assert) {
+      assert.equal(RomaiToLatin('III'),'3');
     });
   });
   
