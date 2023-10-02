@@ -24,6 +24,9 @@
 	else if (n == 'V'){
 	return '5';
 	}
+	else if (n == 'VI'){
+	return '6';
+	}
 	
   }
   
@@ -43,6 +46,9 @@
     });
 	QUnit.test('V', function(assert) {
       assert.equal(RomaiToLatin('V'),'5');
+    });
+	QUnit.test('VI', function(assert) {
+      assert.equal(RomaiToLatin('VI'),'6');
     });
 	
 	
