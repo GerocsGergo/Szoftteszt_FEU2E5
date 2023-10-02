@@ -33,7 +33,9 @@
 	else if (n == 100){
 	return 'C';
 	}
-	
+	else if (n == 500){
+	return 'D';
+	}
   }
   
   
@@ -61,6 +63,9 @@
     });
 	QUnit.test('100', function(assert) {
       assert.equal(LatinToRomai(100),'C');
+    });
+	QUnit.test('500', function(assert) {
+      assert.equal(LatinToRomai(500),'D');
     });
 	
 	
