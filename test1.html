@@ -36,6 +36,10 @@
 	else if (n == 500){
 	return 'D';
 	}
+	else if (n == 1000){
+	return 'M';
+	}
+	
   }
   
   
@@ -67,7 +71,9 @@
 	QUnit.test('500', function(assert) {
       assert.equal(LatinToRomai(500),'D');
     });
-	
+	QUnit.test('1000', function(assert) {
+      assert.equal(LatinToRomai(1000),'M');
+    });
 	
   });
   
