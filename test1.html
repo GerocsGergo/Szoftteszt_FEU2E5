@@ -45,15 +45,25 @@
   
   function Convert(n){
 	var a = "";
-	var hossz = n.toString().length;
+	var hossz = 0;
 	
-	if (n>1000){
+	if (n>=1000){
 		b = n/1000;
 		n = n - 1000;
 		for	(let i = 1; i <= b; i++){
 		 a += 'M';
 		}
 	}
+	else if (n>=500){
+		b = n/500;
+		n = n-500;
+		for	(let i = 1; i <= b; i++){
+		 a += 'D';
+		}
+	
+	}
+	
+	
 	return a;
   }
   
@@ -89,8 +99,8 @@
       assert.equal(LatinToRomai(1000),'M');
     });
 	
-	QUnit.test('Convert1000', function(assert) {
-      assert.equal(Convert(1500),'M');
+	QUnit.test('Convert1500', function(assert) {
+      assert.equal(Convert(1500),'MD');
     });
 
 
