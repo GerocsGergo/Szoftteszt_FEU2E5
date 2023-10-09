@@ -83,16 +83,37 @@
 		n = n-10;
 		for	(let i = 1; i <= b; i++){
 		 a += 'X';
+		 
 		}
 	
 	}
-	if (n>=5){
-		b = n/5;
-		n = n-5;
-		for	(let i = 1; i <= b; i++){
-		 a += 'V';
-		}
-	
+	if (n==9){
+		 a += 'XI';	
+		 
+	}
+	else if (n==8){
+		 a += 'VIII';	
+	}
+	else if (n==7){
+		 a += 'VII';	
+	}
+	else if (n==6){
+		 a += 'VI';	
+	}
+	else if (n==5){
+		 a += 'V';	
+	}
+	else if (n==4){
+		 a += 'IV';	
+	}
+	else if (n==3){
+		 a += 'III';	
+	}
+	else if (n==2){
+		 a += 'II';	
+	}
+	else if (n==1){
+		 a += 'I';	
 	}
 	
 	
@@ -146,7 +167,9 @@
 	QUnit.test('Convert1665', function(assert) {
       assert.equal(Convert(1665),'MDCLXV');
     });
-
+	QUnit.test('Convert1666', function(assert) {
+      assert.equal(Convert(1666),'MDCLXVI');
+    });
 	
   });
   
