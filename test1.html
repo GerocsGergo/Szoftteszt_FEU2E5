@@ -88,6 +88,15 @@
   
    QUnit.module('romai teszt', function() {
 	
+	QUnit.test('Convert50', function(assert) {
+      assert.equal(Convert(50),'L');
+    });
+	QUnit.test('Convert100', function(assert) {
+      assert.equal(Convert(100),'C');
+    });
+	QUnit.test('Convert500', function(assert) {
+      assert.equal(Convert(500),'D');
+    });
 	QUnit.test('Convert1500', function(assert) {
       assert.equal(Convert(1500),'MD');
     });
