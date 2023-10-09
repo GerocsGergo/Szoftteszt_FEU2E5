@@ -8,40 +8,6 @@
   <script src="https://code.jquery.com/qunit/qunit-2.20.0.js"></script>
   <script>
   
-  function LatinToRomai(n){
-  
-    if (n % 1000 == 0){
-	return 'M';
-	}
-	else if (n % 500 == 0){
-	return 'D';
-	}
-	else if (n % 100 == 0){
-	return 'C';
-	}
-	else if (n % 50 == 0){
-	return 'L';
-	}
-	else if (n % 10 == 0){
-	return 'X';
-	}
-	else if (n % 5 == 0){
-	return 'V';
-	}
-	else if (n % 4 == 0){
-	return 'IV';
-	}
-	else if (n % 3 == 0){
-	return 'III';
-	}
-	else if (n % 2 == 0){
-	return 'II';
-	}
-	else if (n % 1 == 0){
-	return 'I';
-	}
-	
-  }
   
   function Convert(n){
 	var a = "";
@@ -121,36 +87,6 @@
   }
   
    QUnit.module('romai teszt', function() {
-    QUnit.test('1', function(assert) {
-      assert.equal(LatinToRomai(1),'I');
-    });
-	QUnit.test('2', function(assert) {
-      assert.equal(LatinToRomai(2),'II');
-    });
-	QUnit.test('3', function(assert) {
-      assert.equal(LatinToRomai(3),'III');
-    });
-	QUnit.test('4', function(assert) {
-      assert.equal(LatinToRomai(4),'IV');
-    });
-	QUnit.test('5', function(assert) {
-      assert.equal(LatinToRomai(5),'V');
-    });
-	QUnit.test('10', function(assert) {
-      assert.equal(LatinToRomai(10),'X');
-    });
-	QUnit.test('50', function(assert) {
-      assert.equal(LatinToRomai(50),'L');
-    });
-	QUnit.test('100', function(assert) {
-      assert.equal(LatinToRomai(100),'C');
-    });
-	QUnit.test('500', function(assert) {
-      assert.equal(LatinToRomai(500),'D');
-    });
-	QUnit.test('1000', function(assert) {
-      assert.equal(LatinToRomai(1000),'M');
-    });
 	
 	QUnit.test('Convert1500', function(assert) {
       assert.equal(Convert(1500),'MD');
@@ -164,7 +100,13 @@
 	QUnit.test('Convert1660', function(assert) {
       assert.equal(Convert(1660),'MDCLX');
     });
-	QUnit.test('Convert1664', function(assert) {
+	QUnit.test('Convert1661', function(assert) {
+      assert.equal(Convert(1661),'MDCLXI');
+    });
+	QUnit.test('Convert1662', function(assert) {
+      assert.equal(Convert(1662),'MDCLXII');
+    });
+	QUnit.test('Convert1663', function(assert) {
       assert.equal(Convert(1663),'MDCLXIII');
     });
 	QUnit.test('Convert1664', function(assert) {
