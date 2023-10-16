@@ -50,9 +50,11 @@
 	function KezdoPoz(x,y,n){
 		
 		var xy = Szelek(x,y);
+		var nez = Iranyok(n);
+		
 		var kezdoX = xy[0]; 
 		var kezdoY = xy[1];
-		var kezdoNez = n;
+		var kezdoNez = nez;
 		
 		return kezdoX+kezdoY+n;
 	}
@@ -77,6 +79,12 @@
     });
 	QUnit.test('Szelek4', function(assert) {
       assert.equal(Szelek(5,5),'44');
+    });
+	QUnit.test('Iranyok', function(assert) {
+      assert.equal(Iranyok('E'),'E');
+    });
+	QUnit.test('Iranyok2', function(assert) {
+      assert.equal(Iranyok('D'),'W');
     });
 	
   });
