@@ -14,7 +14,7 @@
 			 31 32 33 34
 			 41 42 43 44
 			 
-			 N fel S le W jobb E bal
+			 N fel S le W bal E jobb
 	*/
 
 	function Iranyok(n){
@@ -78,11 +78,11 @@
 		}
 		if(m == 'l'){
 			y--;
-			n = 'E';
+			n = 'W';
 		}
 		if(m == 'r'){
 			y++;
-			n = 'W';
+			n = 'E';
 		}
 		
 		var z = KezdoPoz(x,y,n);
@@ -119,13 +119,13 @@
       assert.equal(Mozgas('f',3,1,'W'),'21N');
     });
 	QUnit.test('Mozgas2', function(assert) {
-      assert.equal(Mozgas('r',1,1,'W'),'12W');
+      assert.equal(Mozgas('r',1,1,'W'),'12E');
     });
 	QUnit.test('Mozgas3', function(assert) {
       assert.equal(Mozgas('b',2,2,'W'),'32S');
     });
 	QUnit.test('Mozgas4', function(assert) {
-      assert.equal(Mozgas('l',2,2,'W'),'21E');
+      assert.equal(Mozgas('l',2,2,'W'),'21W');
     });
 	
 	
