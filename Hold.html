@@ -60,10 +60,11 @@
 		var kezdoY = xy[1];
 		var kezdoNez = nez;
 		
-		return kezdoX+kezdoY+n;
+		return kezdoX+kezdoY+kezdoNez;
 	}
 	
 	function Mozgas(m,xi,yi,ni){
+	
 		var xyn = KezdoPoz(xi,yi,ni);
 		var x = Number(xyn[0]);
 		var y = Number(xyn[1]);
@@ -87,7 +88,16 @@
 		}
 		
 		var z = KezdoPoz(x,y,n);
+		
+	
+	if(Akadaly(x,y) == 'nincs'){
 		return z;
+	}
+	else{
+			var u = KezdoPoz(xi,yi,ni);
+			return u;
+	}
+	
 	}
 	
 	function Akadaly(x,y){
@@ -141,6 +151,7 @@
 	QUnit.test('Mozgas4', function(assert) {
       assert.equal(Mozgas('l',2,2,'W'),'21W');
     });
+
 	QUnit.test('Akadaly', function(assert) {
       assert.equal(Akadaly(1,3),'van');
     });
@@ -150,7 +161,6 @@
 	QUnit.test('Akadaly3', function(assert) {
       assert.equal(Akadaly(2,4),'nincs');
     });
-	
 	
 	
   });
