@@ -151,7 +151,12 @@
 	QUnit.test('Mozgas4', function(assert) {
       assert.equal(Mozgas('l',2,2,'W'),'21W');
     });
-
+	QUnit.test('Mozgas4', function(assert) {
+      assert.equal(Mozgas('l',3,4,'W'),'34W');
+    });
+	QUnit.test('Mozgas5', function(assert) {
+      assert.equal(Mozgas('l',1,4,'W'),'14W');
+    });
 	QUnit.test('Akadaly', function(assert) {
       assert.equal(Akadaly(1,3),'van');
     });
