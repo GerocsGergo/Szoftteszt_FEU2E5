@@ -95,7 +95,7 @@
 	}
 	else{
 			var u = KezdoPoz(xi,yi,ni);
-			return u;
+			return u+' '+'Akadaly érzékelve';
 	}
 	
 	}
@@ -152,10 +152,10 @@
       assert.equal(Mozgas('l',2,2,'W'),'21W');
     });
 	QUnit.test('Mozgas4', function(assert) {
-      assert.equal(Mozgas('l',3,4,'W'),'34W');
+      assert.equal(Mozgas('l',3,4,'W'),'34W Akadaly érzékelve');
     });
 	QUnit.test('Mozgas5', function(assert) {
-      assert.equal(Mozgas('l',1,4,'W'),'14W');
+      assert.equal(Mozgas('l',1,4,'W'),'14W Akadaly érzékelve');
     });
 	QUnit.test('Akadaly', function(assert) {
       assert.equal(Akadaly(1,3),'van');
