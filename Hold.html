@@ -8,16 +8,42 @@
   <script src="https://code.jquery.com/qunit/qunit-2.20.0.js"></script>
   <script>
   
-  /*
+  /*	térkép:
 		xy   11 12 13 14 	
 		     21 22 23 24
 			 31 32 33 34
 			 41 42 43 44
 	*/
 
+	 function Szelek(x,y){
+		 var MaxX = 4;
+		 var MinX = 1;
+		 var MaxY = 4;
+		 var MinY = 1;
+		
+		if(x > 4){
+			x = 4;
+		}
+		if(x < 1){
+			x = 1;
+		}
+		
+		if(y > 4){
+			y = 4;
+		}
+		if(y < 1){
+			y = 1;
+		}
+		
+		var xy =String(x)+String(y)
+		return xy;
+	 }
+	
 	function KezdoPoz(x,y,n){
-		var kezdoX = String(x); 
-		var kezdoY = String(y);
+		
+		var xy = Szelek(x,y);
+		var kezdoX = xy[0]; 
+		var kezdoY = xy[1];
 		var kezdoNez = n;
 		
 		return kezdoX+kezdoY+n;
@@ -29,8 +55,6 @@
 	QUnit.test('KezdoPoz', function(assert) {
       assert.equal(KezdoPoz(1,1,'W'),'11W');
     });
-	
-	
   });
   
 </script>
