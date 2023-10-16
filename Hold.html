@@ -32,17 +32,18 @@
 		 var MinY = 1;
 		
 		if(x > 4){
-			x = 4;
+			
+			x = x%4;
 		}
 		if(x < 1){
-			x = 1;
+			x = -x+1;
 		}
 		
 		if(y > 4){
-			y = 4;
+			y = y%4;
 		}
 		if(y < 1){
-			y = 1;
+			y = -y+1;
 		}
 		
 		var xy =String(x)+String(y)
@@ -94,19 +95,19 @@
       assert.equal(KezdoPoz(1,1,'W'),'11W');
     });
 	QUnit.test('KezdoPoz2', function(assert) {
-      assert.equal(KezdoPoz(5,-2,'W'),'41W');
+      assert.equal(KezdoPoz(5,-2,'W'),'13W');
     });	
 	QUnit.test('Szelek', function(assert) {
       assert.equal(Szelek(1,1),'11');
     });
 	QUnit.test('Szelek2', function(assert) {
-      assert.equal(Szelek(5,-2),'41');
+      assert.equal(Szelek(5,-2),'13');
     });
 	QUnit.test('Szelek3', function(assert) {
-      assert.equal(Szelek(-2,-2),'11');
+      assert.equal(Szelek(-2,-2),'33');
     });
 	QUnit.test('Szelek4', function(assert) {
-      assert.equal(Szelek(5,5),'44');
+      assert.equal(Szelek(5,5),'11');
     });
 	QUnit.test('Iranyok', function(assert) {
       assert.equal(Iranyok('E'),'E');
