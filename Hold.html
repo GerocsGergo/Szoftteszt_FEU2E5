@@ -55,6 +55,16 @@
 	QUnit.test('KezdoPoz', function(assert) {
       assert.equal(KezdoPoz(1,1,'W'),'11W');
     });
+	QUnit.test('KezdoPoz2', function(assert) {
+      assert.equal(KezdoPoz(5,-2,'W'),'41W');
+    });	
+	QUnit.test('Szelek', function(assert) {
+      assert.equal(Szelek(1,1),'11');
+    });
+	QUnit.test('Szelek2', function(assert) {
+      assert.equal(Szelek(5,-2),'41');
+    });
+	
   });
   
 </script>
