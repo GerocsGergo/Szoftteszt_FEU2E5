@@ -61,19 +61,19 @@
 		return kezdoX+kezdoY+n;
 	}
 	
-	function Mozgas(m,x,y,n){
-		var xyn = KezdoPoz(x,y,n);
+	function Mozgas(m,xi,yi,ni){
+		var xyn = KezdoPoz(xi,yi,ni);
 		var x = Number(xyn[0]);
 		var y = Number(xyn[1]);
 		var n = xyn[2];
 		
 		if(m == 'f'){
 			x--;
-			n = 'S';
+			n = 'N';
 		}
 		if(m == 'b'){
 			x++;
-			n = 'N';
+			n = 'S';
 		}
 		if(m == 'l'){
 			y--;
@@ -84,8 +84,8 @@
 			n = 'W';
 		}
 		
-		
-		
+		var z = KezdoPoz(x,y,n);
+		return z;
 	}
   
    QUnit.module('Hold teszt', function() {
@@ -114,6 +114,19 @@
 	QUnit.test('Iranyok2', function(assert) {
       assert.equal(Iranyok('D'),'W');
     });
+	QUnit.test('Mozgas', function(assert) {
+      assert.equal(Mozgas('f',3,1,'W'),'21N');
+    });
+	QUnit.test('Mozgas2', function(assert) {
+      assert.equal(Mozgas('r',1,1,'W'),'12W');
+    });
+	QUnit.test('Mozgas3', function(assert) {
+      assert.equal(Mozgas('b',2,2,'W'),'32S');
+    });
+	QUnit.test('Mozgas4', function(assert) {
+      assert.equal(Mozgas('l',2,2,'W'),'21E');
+    });
+	
 	
   });
   
